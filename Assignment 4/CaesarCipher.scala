@@ -1,7 +1,7 @@
 object CaesarCipher extends App
 {
-  val alphabetUpper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  val alphabetLower="abcdefghijklmnopqrstuvwxyz"
+  val alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  val alphabetLower = "abcdefghijklmnopqrstuvwxyz"
 
   //encryption function
   def Encryption(text:String, key:Int) = text.map
@@ -15,7 +15,7 @@ object CaesarCipher extends App
   def Decryption(text:String, key:Int) = Encryption(text,-key)
   
   //cipher function
-  def Cipher(a:IndexedSeq[Char], c:Char, key:Int)=a((c-a.head + key + a.size) % a.size)
+  def Cipher(a:IndexedSeq[Char], c:Char, key:Int) = a((c-a.head + key + a.size) % a.size)
   
   val text="This is Source Code for Caesar Cipher in Scala @1.0"
   val encrypt=Encryption(text, 4) //shift by 4
