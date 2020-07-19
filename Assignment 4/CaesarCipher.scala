@@ -18,7 +18,7 @@ object CaesarCipher extends App
   def Cipher(a:IndexedSeq[Char], c:Char, key:Int) = a((c-a.head + key + a.size) % a.size)
   
   val text="This is Source Code for Caesar Cipher in Scala @1.0"
-  val encrypt=Encryption(text, 4) //shift by 4
+  val encrypt=Encryption(text, 4) //shift by 4 characters
   
   println("Plain Text     : " + text)
   println("Encrypted Text : " + encrypt)
